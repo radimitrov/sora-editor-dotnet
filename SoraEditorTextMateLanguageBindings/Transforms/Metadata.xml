@@ -1,0 +1,38 @@
+﻿<metadata>
+  <!--
+  This sample removes the class: android.support.v4.content.AsyncTaskLoader.LoadTask:
+  <remove-node path="/api/package[@name='android.support.v4.content']/class[@name='AsyncTaskLoader.LoadTask']" />
+  
+  This sample removes the method: android.support.v4.content.CursorLoader.loadInBackground:
+  <remove-node path="/api/package[@name='android.support.v4.content']/class[@name='CursorLoader']/method[@name='loadInBackground']" />
+  -->
+	<remove-node path="/api/package[@name='io.github.rosemoe.sora.widget']/class[@name='EditorRenderer']/field[@name='renderNodeHolder']" />
+	<remove-node path="/api/package[@name='io.github.rosemoe.sora.widget']/class[@name='CodeEditor']/field[@name='styleDelegate']" />
+	<remove-node path="/api/package[@name='io.github.rosemoe.sora.widget']/class[@name='CodeEditor']/field[@name='keyEventHandler']" />
+	<remove-node path="/api/package[@name='io.github.rosemoe.sora.widget']/class[@name='CodeEditor']/method[@name='getCursorBlink' and count(parameter)=0]" />
+	<remove-node path="/api/package[@name='io.github.rosemoe.sora.lang.analysis']/class[@name='AsyncIncrementalAnalyzeManager']" />
+	<remove-node path="/api/package[@name='io.github.rosemoe.sora.widget.component']/class[@name='EditorCompletionAdapterInvoker']" />
+	<remove-node path="/api/package[@name='io.github.rosemoe.sora.widget.layout']/class[@name='WordwrapLayout']/constructor[@name='WordwrapLayout' and count(parameter)=5 and parameter[1][@type='io.github.rosemoe.sora.widget.CodeEditor'] and parameter[2][@type='io.github.rosemoe.sora.text.Content'] and parameter[3][@type='boolean'] and parameter[4][@type='java.util.List&lt;io.github.rosemoe.sora.widget.layout.WordwrapLayout.RowRegion&gt;'] and parameter[5][@type='boolean']]" />
+	<remove-node path="/api/package[@name='io.github.rosemoe.sora.widget']/class[@name='EditorRenderer']/method[@name='drawRows' and count(parameter)=6 and parameter[1][@type='android.graphics.Canvas'] and parameter[2][@type='float'] and parameter[3][@type='io.github.rosemoe.sora.util.LongArrayList'] and parameter[4][@type='java.util.List&lt;io.github.rosemoe.sora.widget.EditorRenderer.DrawCursorTask&gt;'] and parameter[5][@type='io.github.rosemoe.sora.util.LongArrayList'] and parameter[6][@type='android.util.MutableInt']]" />
+	<remove-node path="/api/package[@name='io.github.rosemoe.sora.widget.layout']/class[@name='WordwrapLayout']/method[@name='getRowTable' and count(parameter)=0]" />
+	<remove-node path="/api/package[@name='io.github.rosemoe.sora.lang.analysis']/class[@name='SimpleAnalyzeManager']" />
+
+	<attr path="/api/package[@name='io.github.rosemoe.sora.widget.component']/class[@name='DefaultCompletionItemAdapter']/method[@name='getView' and count(parameter)=4 and parameter[1][@type='int'] and parameter[2][@type='android.view.View'] and parameter[3][@type='android.view.ViewGroup'] and parameter[4][@type='boolean']]" name="visibility">protected</attr>
+	<attr path="/api/package[@name='io.github.rosemoe.sora.widget.component']/class[@name='EditorCompletionAdapter']/method[@name='getItem' and count(parameter)=1 and parameter[1][@type='int']]" name="managedReturn">Java.Lang.Object</attr>
+	<attr path="/api/package[@name='io.github.rosemoe.sora.widget.component']/class[@name='EditorCompletionAdapter']/method[@name='getItem' and count(parameter)=1 and parameter[1][@type='int']]" name="managedOverride">override</attr>
+	<remove-node path="/api/package[@name='io.github.rosemoe.sora.widget.component']/class[@name='EditorCompletionAdapterInvoker']/method[@name='getItem' and count(parameter)=1 and parameter[1][@type='int']]" />
+	<attr path="/api/package[@name='io.github.rosemoe.sora.widget.component']/class[@name='DefaultCompletionLayout']" name="managedType">Android.Widget.AdapterView</attr>
+	<attr path="/api/package[@name='io.github.rosemoe.sora.widget.component']/class[@name='DefaultCompletionLayout']/method[@name='getCompletionList' and count(parameter)=0]" name="managedReturn">Android.Widget.AdapterView</attr>
+	<attr path="/api/package[@name='io.github.rosemoe.sora.lang.completion.snippet']/class[@name='SnippetItem']/method[@name='clone' and count(parameter)=0]" name="managedReturn">Java.Lang.Object</attr>
+	<attr path="/api/package[@name='io.github.rosemoe.sora.lang.completion.snippet']/class[@name='PlainTextItem']/method[@name='clone' and count(parameter)=0]" name="managedReturn">Java.Lang.Object</attr>
+	<attr path="/api/package[@name='io.github.rosemoe.sora.lang.completion.snippet']/class[@name='PlaceholderItem']/method[@name='clone' and count(parameter)=0]" name="managedReturn">Java.Lang.Object</attr>
+	<attr path="/api/package[@name='io.github.rosemoe.sora.lang.completion.snippet']/class[@name='InterpolatedShellItem']/method[@name='clone' and count(parameter)=0]" name="managedReturn">Java.Lang.Object</attr>
+	<attr path="/api/package[@name='io.github.rosemoe.sora.lang.completion.snippet']/class[@name='VariableItem']/method[@name='clone' and count(parameter)=0]" name="managedReturn">Java.Lang.Object</attr>
+	<attr path="/api/package[@name='io.github.rosemoe.sora.lang.completion']/class[@name='CompletionItem']/method[@name='label' and count(parameter)=1 and parameter[1][@type='java.lang.CharSequence']]" name="name">WithLabel</attr>
+	<attr path="/api/package[@name='io.github.rosemoe.sora.lang.completion']/class[@name='CompletionItem']/method[@name='label' and count(parameter)=1 and parameter[1][@type='java.lang.String']]"  name="name">WithLabel</attr>
+	<attr path="/api/package[@name='io.github.rosemoe.sora.lang.completion']/class[@name='CompletionItem']/method[@name='desc' and count(parameter)=1 and parameter[1][@type='java.lang.CharSequence']]" name="name">WithDesc</attr>
+	<attr path="/api/package[@name='io.github.rosemoe.sora.lang.completion']/class[@name='CompletionItem']/method[@name='desc' and count(parameter)=1 and parameter[1][@type='java.lang.String']]"  name="name">WithDesc</attr>
+	<attr path="/api/package[@name='io.github.rosemoe.sora.lang.completion']/class[@name='CompletionItem']/method[@name='icon' and count(parameter)=1 and parameter[1][@type='android.graphics.drawable.Drawable']]" name="name">WithIcon</attr>
+	<attr path="/api/package[@name='io.github.rosemoe.sora.langs.java']/class[@name='State']/field[@name='state']" name="name">StateValue</attr>
+	<attr path="/api/package[@name='io.github.rosemoe.sora.langs.java']" name="managedName" >Io.Github.Rosemoe.Sora.Langs.JavaLanguage</attr>
+</metadata>

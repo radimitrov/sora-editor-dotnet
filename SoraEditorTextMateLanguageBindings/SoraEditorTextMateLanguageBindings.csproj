@@ -1,0 +1,44 @@
+<Project Sdk="Microsoft.NET.Sdk">
+  <PropertyGroup>
+    <TargetFramework>net7.0-android</TargetFramework>
+    <SupportedOSPlatformVersion>21</SupportedOSPlatformVersion>
+    <Nullable>disable</Nullable>
+    <ImplicitUsings>disable</ImplicitUsings>
+  </PropertyGroup>
+  <ItemGroup>
+    <AndroidLibrary Remove="checker-qual-3.12.0.jar" />
+    <AndroidLibrary Remove="failureaccess-1.0.1.jar" />
+    <AndroidLibrary Remove="listenablefuture-9999.0-empty-to-avoid-conflict-with-guava.jar" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Remove="jcodings-1.0.57.jar" />
+    <None Remove="joni-2.1.43.jar" />
+    <None Remove="language-textmate-0.20.4.aar" />
+    <None Remove="org.eclipse.jdt.annotation-2.2.700.jar" />
+    <None Remove="snakeyaml-1.33.jar" />
+    <None Remove="Transforms\Metadata.xml" />
+  </ItemGroup>
+	<ItemGroup>
+		<PackageReference Include="Xamarin.AndroidX.AppCompat" Version="1.5.1" />
+		<PackageReference Include="Xamarin.Google.Code.FindBugs.JSR305" Version="3.0.2.6" />
+		<PackageReference Include="Xamarin.Google.Guava" Version="31.1.0.4" />
+		<PackageReference Include="Xamarin.Kotlin.StdLib.Jdk8" Version="1.8.0" />
+	</ItemGroup>
+	<ItemGroup>
+	  <ProjectReference Include="..\SoraEditorBindings\SoraEditorBindings.csproj" />
+	</ItemGroup>
+	<ItemGroup>
+	  <AndroidLibrary Update="jcodings-1.0.57.jar">
+	    <Bind>false</Bind>
+	  </AndroidLibrary>
+	  <AndroidLibrary Update="joni-2.1.43.jar">
+	    <Bind>false</Bind>
+	  </AndroidLibrary>
+	  <AndroidLibrary Update="org.eclipse.jdt.annotation-2.2.700.jar">
+	    <Bind>false</Bind>
+	  </AndroidLibrary>
+	  <AndroidLibrary Update="snakeyaml-1.33.jar">
+	    <Bind>false</Bind>
+	  </AndroidLibrary>
+	</ItemGroup>
+</Project>
